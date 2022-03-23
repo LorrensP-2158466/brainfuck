@@ -3,7 +3,6 @@
 //
 
 #include "Parser.h"
-#include "iostream"
 
 
 parser::parser(FILE *in) : m_in{in}{
@@ -44,13 +43,21 @@ int parser::codesize() const{
 }
 
 
-std::vector<Tokens> parser::parse() {
+std::vector<instructionCluster> parser::parse() {
     char ch;
-    int i = 0;
-    while ((ch = fgetc(m_in)) != EOF){
-        Tokens code = command(ch);
-        if (code != Tokens::UNKNOWN) { // filter out unknown operands
-            m_code.push_back(code);
+    while ((ch = (char)fgetc(m_in)) != EOF){
+        Tokens code{command(ch)};
+        if (code != Tokens::UNKNOWN){ // filter unknown operands
+            instructionCluster instr;
+            instr.token = code;
+            int count = 1;
+            Tokens tmpcode{command((char)fgetc(m_in))};
+            while (tmpcode == code) {
+               ++count;
+               tmpcode = command((char)fgetc(m_in));
+            }
+            instr.amount = count;
+            m_code.push_back(instr);
             ++m_codesize;
         }
     }

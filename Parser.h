@@ -4,16 +4,18 @@
 #include <cstdio>
 #include <vector>
 #include <array>
-const int defaultCODESIZE = 100;
 
 enum class Tokens{INCREMENT, DECREMENT, ITERATOR_L, ITERATOR_R, BEGIN_LOOP, END_LOOP, OUTPUT, INPUT, UNKNOWN};
-
+typedef struct instructionCluster{
+    int amount;
+    Tokens token;
+}instructionCluster;
 
 class parser {
 public:
     explicit parser(FILE *in);
     ~parser();
-    std::vector<Tokens> parse();
+    std::vector<instructionCluster> parse();
     [[nodiscard]] int codesize() const;
 
 private:
@@ -22,7 +24,7 @@ private:
     // tokens
     [[nodiscard]] Tokens command(char c) const;
     //code
-    std::vector<Tokens> m_code{};
+    std::vector<instructionCluster> m_code{};
     int m_codesize{0};
     FILE *m_in;
 

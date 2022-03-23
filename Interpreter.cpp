@@ -15,25 +15,25 @@ Interpreter::~Interpreter() {
 void Interpreter::executeProgram() {
     m_code = m_parser->parse();
     while (!endOfProgram()) {
-        executeOperand(m_code[m_curr_codeOP]);
+        execudeInstruction(m_code[m_curr_codeOP]);
         ++m_curr_codeOP;
     }
 }
 
 
-void Interpreter::executeOperand(Tokens op) {
-    switch (op){
+void Interpreter::execudeInstruction(instructionCluster instruction) {
+    switch (instruction.token){
         case (Tokens::ITERATOR_R):
-            ++m_curr_dataptr;
+            m_curr_dataptr += instruction.amount;
             break;
         case (Tokens::ITERATOR_L):
-            --m_curr_dataptr;
+            m_curr_dataptr -= instruction.amount;
             break;
         case (Tokens::INCREMENT):
-            ++m_datastrip[m_curr_dataptr];
+            m_datastrip[m_curr_dataptr] += instruction.amount;
             break;
         case (Tokens::DECREMENT):
-            --m_datastrip[m_curr_dataptr];
+            m_datastrip[m_curr_dataptr] -= instruction.amount;
             break;
         case (Tokens::OUTPUT):
             putc(m_datastrip[m_curr_dataptr], stdout);
