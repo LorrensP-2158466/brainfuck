@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug"
+			"value" : "/Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck"
+			"value" : "/Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug"
+			"value" : "/Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug"
 		},
 		{
 			"name" : "project_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck"
+			"value" : "/Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck"
 		}
 	],
 	"kind" : "cache",

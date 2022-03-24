@@ -5,7 +5,6 @@
 
 int main() {
     int i = 0;
-    std::cout << "hello world program";
     FILE *in = fopen("helloworld.txt", "r+");
     Interpreter interpreter{in};
     interpreter.executeProgram();

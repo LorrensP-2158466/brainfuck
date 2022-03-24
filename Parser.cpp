@@ -56,6 +56,7 @@ std::vector<instructionCluster> parser::parse() {
                ++count;
                tmpcode = command((char)fgetc(m_in));
             }
+            fseek(m_in, -1, SEEK_CUR); // put reader 1 step back to read tmpcode again
             instr.amount = count;
             m_code.push_back(instr);
             ++m_codesize;

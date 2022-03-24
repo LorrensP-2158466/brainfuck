@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug/
+cmake_ninja_workdir = /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck -B/Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug
+  COMMAND = cd /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck -B/Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -72,7 +72,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_project: phony || CMakeFiles/project.dir
 
-build CMakeFiles/project.dir/main.cpp.o: CXX_COMPILER__project_Debug /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/main.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/main.cpp.o: CXX_COMPILER__project_Debug /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/main.cpp || cmake_object_order_depends_target_project
   DEP_FILE = CMakeFiles/project.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++2a
   OBJECT_DIR = CMakeFiles/project.dir
@@ -80,7 +80,7 @@ build CMakeFiles/project.dir/main.cpp.o: CXX_COMPILER__project_Debug /Users/lorr
   TARGET_COMPILE_PDB = CMakeFiles/project.dir/
   TARGET_PDB = project.pdb
 
-build CMakeFiles/project.dir/Interpreter.cpp.o: CXX_COMPILER__project_Debug /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/Interpreter.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/Interpreter.cpp.o: CXX_COMPILER__project_Debug /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/Interpreter.cpp || cmake_object_order_depends_target_project
   DEP_FILE = CMakeFiles/project.dir/Interpreter.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++2a
   OBJECT_DIR = CMakeFiles/project.dir
@@ -88,7 +88,7 @@ build CMakeFiles/project.dir/Interpreter.cpp.o: CXX_COMPILER__project_Debug /Use
   TARGET_COMPILE_PDB = CMakeFiles/project.dir/
   TARGET_PDB = project.pdb
 
-build CMakeFiles/project.dir/Parser.cpp.o: CXX_COMPILER__project_Debug /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/Parser.cpp || cmake_object_order_depends_target_project
+build CMakeFiles/project.dir/Parser.cpp.o: CXX_COMPILER__project_Debug /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/Parser.cpp || cmake_object_order_depends_target_project
   DEP_FILE = CMakeFiles/project.dir/Parser.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++2a
   OBJECT_DIR = CMakeFiles/project.dir
@@ -122,7 +122,7 @@ build project: CXX_EXECUTABLE_LINKER__project_Debug CMakeFiles/project.dir/main.
 # =============================================================================
 
 #############################################
-# Folder: /Users/lorrens/Downloads/Lorrens/BrainFuck/brainfuck/cmake-build-debug
+# Folder: /Users/lorrens/Downloads/Lorrens/Brainfuck/brainfuck/cmake-build-debug
 
 build all: phony project
 

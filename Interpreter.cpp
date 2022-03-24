@@ -36,7 +36,9 @@ void Interpreter::execudeInstruction(instructionCluster instruction) {
             m_datastrip[m_curr_dataptr] -= instruction.amount;
             break;
         case (Tokens::OUTPUT):
-            putc(m_datastrip[m_curr_dataptr], stdout);
+            for (int i = 0; i < instruction.amount; ++i) {
+                putc(m_datastrip[m_curr_dataptr], stdout);
+            }
             break;
         case (Tokens::INPUT):
             m_datastrip[m_curr_dataptr] = getc(stdin);

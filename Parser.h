@@ -6,6 +6,7 @@
 #include <array>
 
 enum class Tokens{INCREMENT, DECREMENT, ITERATOR_L, ITERATOR_R, BEGIN_LOOP, END_LOOP, OUTPUT, INPUT, UNKNOWN};
+
 typedef struct instructionCluster{
     int amount;
     Tokens token;
@@ -19,8 +20,6 @@ public:
     [[nodiscard]] int codesize() const;
 
 private:
-    //instruction set
-    std::array<char, 8> m_instructionset{'.', ',', '[', ']', '>', '<', '+', '-'};
     // tokens
     [[nodiscard]] Tokens command(char c) const;
     //code
